@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
-@import "tailwindcss";
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -44,7 +44,7 @@
   }
 
   .text-14-normal {
-    @apply font-normal text-sm text-white opacity-80;
+    @apply font-normal text-sm text-white-100/80;
   }
 
   .pink_container {
@@ -76,9 +76,10 @@
   }
 
   .no-result {
-    @apply text-black text-sm font-normal;
+    @apply text-black-100 text-sm font-normal;
   }
 
+  /* profile */
   .profile_container {
     @apply w-full pb-10 pt-20 px-6 max-w-7xl mx-auto lg:flex-row flex-col flex gap-10;
   }
@@ -88,13 +89,14 @@
   }
 
   .profile_title {
-    @apply w-11/12 bg-white border-[5px] border-black rounded-[20px] px-5 py-3 absolute -top-9 shadow-100;
+    @apply w-11/12 bg-white border-[5px] border-black rounded-[20px] px-5 py-3 absolute -top-9 after:absolute after:content-[''] after:-top-1 after:right-0 after:-skew-y-6 after:bg-black after:-z-[1] after:rounded-[20px] after:w-full after:h-[60px] before:absolute before:content-[''] before:-bottom-1 before:left-0  before:-skew-y-6 before:w-full before:h-[60px] before:bg-black  before:-z-[1] before:rounded-[20px] shadow-100;
   }
 
   .profile_image {
     @apply rounded-full object-cover border-[3px] border-black;
   }
 
+  /* idea details */
   .divider {
     @apply border-dotted bg-zinc-400 max-w-4xl my-10 mx-auto;
   }
@@ -103,6 +105,7 @@
     @apply bg-zinc-400 h-10 w-24 rounded-lg fixed bottom-3 right-3;
   }
 
+  /* navbar */
   .avatar {
     @apply p-0 focus-visible:ring-0 bg-none rounded-full drop-shadow-md !important;
   }
@@ -115,28 +118,30 @@
     @apply border-[5px] py-4 border-black bg-white text-black relative shadow-100 font-work-sans font-medium hover:shadow-none transition-all duration-500 !important;
   }
 
+  /* searchform */
   .search-form {
     @apply max-w-3xl w-full min-h-[80px] bg-white border-[5px] border-black rounded-[80px] text-[24px] mt-8 px-5 flex flex-row items-center gap-5;
   }
 
   .search-input {
-    @apply flex-1 font-bold placeholder:font-semibold placeholder:text-black w-full h-auto outline-none;
+    @apply flex-1 font-bold placeholder:font-semibold placeholder:text-black-100 w-full h-auto outline-none;
   }
 
   .search-btn {
     @apply size-[50px] rounded-full bg-black flex justify-center items-center !important;
   }
 
+  /* startupcard */
   .startup-card {
     @apply bg-white border-[5px] border-black py-6 px-5 rounded-[22px] shadow-200 hover:border-primary transition-all duration-500 hover:shadow-300 hover:bg-primary-100;
   }
 
   .startup-card_date {
-    @apply font-medium text-[16px] bg-primary-100 px-4 py-2 rounded-full group-hover:bg-white;
+    @apply font-medium text-[16px] bg-primary-100 px-4 py-2 rounded-full group-hover:bg-white-100;
   }
 
   .startup-card_desc {
-    @apply font-normal text-[16px] line-clamp-2 my-3 text-black break-all;
+    @apply font-normal text-[16px] line-clamp-2 my-3 text-black-100 break-all;
   }
 
   .startup-card_img {
@@ -144,13 +149,14 @@
   }
 
   .startup-card_btn {
-    @apply rounded-full bg-black font-medium text-[16px] text-white px-5 py-3 !important;
+    @apply rounded-full bg-black-200 font-medium text-[16px] text-white px-5 py-3 !important;
   }
 
   .startup-card_skeleton {
     @apply w-full h-96 rounded-[22px] bg-zinc-400;
   }
 
+  /* startupform */
   .startup-form {
     @apply max-w-2xl mx-auto bg-white my-10 space-y-8 px-6;
   }
@@ -160,11 +166,11 @@
   }
 
   .startup-form_input {
-    @apply border-[3px] border-black px-5 py-7 text-[18px] text-black font-semibold rounded-full mt-3 placeholder:text-black !important;
+    @apply border-[3px] border-black px-5 py-7 text-[18px] text-black font-semibold rounded-full mt-3 placeholder:text-black-300 !important;
   }
 
   .startup-form_textarea {
-    @apply border-[3px] border-black p-5 text-[18px] text-black font-semibold rounded-[20px] mt-3 placeholder:text-black !important;
+    @apply border-[3px] border-black p-5 text-[18px] text-black font-semibold rounded-[20px] mt-3 placeholder:text-black-300 !important;
   }
 
   .startup-form_error {
@@ -172,13 +178,14 @@
   }
 
   .startup-form_editor {
-    @apply mt-3 border-[3px] border-black text-[18px] text-black font-semibold placeholder:text-black !important;
+    @apply mt-3 border-[3px] border-black text-[18px] text-black font-semibold placeholder:text-black-300 !important;
   }
 
   .startup-form_btn {
     @apply bg-primary border-[4px] border-black rounded-full p-5 min-h-[70px] w-full font-bold text-[18px] !important;
   }
 
+  /* view */
   .view-container {
     @apply flex justify-end items-center mt-5 fixed bottom-3 right-3;
   }
